@@ -1,0 +1,42 @@
+coding style
+缩进
+变量名可读
+if和括号空格           java 即使if语句只有一句也要大括号
+if和for大括号
+分号和后面空格 前面不用 大小于号两边加空格
+加空格回车 第一份部分异常处理 第二部分 第三部分return
+变量是null时候会挂掉
+异常检测 边界处理
+评价角度
+1.代码看起来舒服 review的时间 
+2.coding习惯 程序风格
+3.沟通能力
+4.出test case
+
+刷题的过程总结归类 
+找出同一类题目的模板程序
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target){
+        map<int,int> mapping;
+        vector<int> result;
+        for(int i=0;i<nums.size();++i){  
+            ///i=0
+            mapping[nums[i]]=i;
+            ///value在前    
+        }
+        for(int i=0;i<nums.size();++i){
+            int searched=target-nums[i];
+            ///直接里面定义了    
+            ///mapping.find(searched);
+        if(mapping.find(searched)!=mapping.end()&&mapping[searched]!=i){
+            result.push_back(i);
+            result.push_back(mapping[searched]);
+            ///why
+            break;
+        }
+    }
+        return result;
+}
+};
